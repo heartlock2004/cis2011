@@ -214,8 +214,6 @@ footer a:hover {
 
 .checkout button[type="submit"]:hover {
     background-color: #FFC300;
-    <head>
-    <link rel="stylesheet" href="styles.css">
-</head>
+}
 }
 }
