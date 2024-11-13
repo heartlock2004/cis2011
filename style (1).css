@@ -1,219 +1,271 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #FFF7F3;
-    color: #333333; 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #FFF7F3;
+            color: #333333;
+        }
 
-.navbar {
-    background-color: #FF69B4; 
-    padding: 10px;
-    text-align: center;
-}
+        .navbar {
+            background-color: #FF69B4;
+            padding: 10px;
+            text-align: center;
+        }
 
-.navbar ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
+        .navbar ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
 
-.navbar li {
-    display: inline;
-    margin: 0 15px;
-}
+        .navbar li {
+            display: inline;
+            margin: 0 15px;
+        }
 
-.navbar a {
-    color: #FFFFFF;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 16px;
-}
+        .navbar a {
+            color: #FFFFFF;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+        }
 
-.navbar a:hover {
-    color: #FFD700; 
-}
+        .navbar a:hover {
+            color: #FFD700;
+        }
 
-.hero {
-    text-align: center;
-    padding: 40px 20px;
-    background-color: #FFE4E1; 
-}
+        .hero {
+            text-align: center;
+            padding: 40px 20px;
+            background-color: #FFE4E1;
+        }
 
-.hero .logo {
-    width: 150px;
-    margin-bottom: 20px;
-}
+        .hero .logo {
+            width: 150px;
+            margin-bottom: 20px;
+        }
 
-.hero h1 {
-    font-size: 36px;
-    color: #FF69B4;
-}
+        .hero h1 {
+            font-size: 36px;
+            color: #FF69B4;
+        }
 
-.hero p {
-    font-size: 18px;
-    color: #333333;
-}
+        .hero p {
+            font-size: 18px;
+            color: #333333;
+        }
 
-.hero .button {
-    background-color: #FFD700;
-    color: #FFFFFF;
-    padding: 12px 24px;
-    font-size: 16px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin: 10px;
-    text-decoration: none;
-}
+        .hero .button {
+            background-color: #FFD700;
+            color: #FFFFFF;
+            padding: 12px 24px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 10px;
+            text-decoration: none;
+        }
 
-.hero .button:hover {
-    background-color: #FFC300;
-}
+        .hero .button:hover {
+            background-color: #FFC300;
+        }
 
-.product-card {
-    background-color: #FFFFFF;
-    border: 1px solid #DDDDDD;
-    border-radius: 8px;
-    padding: 15px;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin: 15px;
-    width: 200px;
-    display: inline-block;
-    vertical-align: top;
-}
+        .product-card {
+            background-color: #FFFFFF;
+            border: 1px solid #DDDDDD;
+            border-radius: 8px;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 15px;
+            width: 200px;
+            display: inline-block;
+            vertical-align: top;
+        }
 
-.product-card img {
-    width: 100%;
-    border-radius: 5px;
-}
+        .product-card img {
+            width: 100%;
+            border-radius: 5px;
+        }
 
-.product-card h3 {
-    color: #FF69B4;
-    font-size: 18px;
-}
+        .product-card h3 {
+            color: #FF69B4;
+            font-size: 18px;
+        }
 
-.product-card .price {
-    color: #333333;
-    font-weight: bold;
-    margin: 10px 0;
-}
+        .product-card .price {
+            color: #333333;
+            font-weight: bold;
+            margin: 10px 0;
+        }
 
-.product-card button {
-    background-color: #FFD700; 
-    color: #FFFFFF;
-    border: none;
-    padding: 10px 20px;
-    font-size: 14px;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 10px;
-}
+        .product-card button {
+            background-color: #FFD700;
+            color: #FFFFFF;
+            border: none;
+            padding: 10px 20px;
+            font-size: 14px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
 
-.product-card button:hover {
-    background-color: #FFC300; 
-}
+        .product-card button:hover {
+            background-color: #FFC300;
+        }
 
-.featured-boxes {
-    text-align: center;
-    padding: 40px 20px;
-}
+        .featured-boxes {
+            text-align: center;
+            padding: 40px 20px;
+        }
 
-.featured-boxes h2 {
-    font-size: 28px;
-    color: #FF69B4;
-}
+        .featured-boxes h2 {
+            font-size: 28px;
+            color: #FF69B4;
+        }
 
-footer {
-    background-color: #FF69B4;
-    color: #FFFFFF;
-    padding: 20px;
-    text-align: center;
-}
+        footer {
+            background-color: #FF69B4;
+            color: #FFFFFF;
+            padding: 20px;
+            text-align: center;
+        }
 
-footer .footer-section {
-    margin-bottom: 10px;
-}
+        footer .footer-section {
+            margin-bottom: 10px;
+        }
 
-footer a {
-    color: #FFD700;
-    text-decoration: none;
-}
+        footer a {
+            color: #FFD700;
+            text-decoration: none;
+        }
 
-footer a:hover {
-    color: #FFFFFF;
-}
+        footer a:hover {
+            color: #FFFFFF;
+        }
 
-.cart {
-    padding: 20px;
-    text-align: center;
-}
+        .cart {
+            padding: 20px;
+            text-align: center;
+        }
 
-.cart h2 {
-    font-size: 24px;
-    color: #FF69B4;
-}
+        .cart h2 {
+            font-size: 24px;
+            color: #FF69B4;
+        }
 
-.cart-item {
-    padding: 10px;
-    border-bottom: 1px solid #DDDDDD;
-}
+        .cart-item {
+            padding: 10px;
+            border-bottom: 1px solid #DDDDDD;
+        }
 
-#total-price {
-    font-weight: bold;
-    margin: 20px 0;
-}
+        #total-price {
+            font-weight: bold;
+            margin: 20px 0;
+        }
 
-.checkout {
-    padding: 20px;
-    max-width: 600px;
-    margin: 0 auto;
-    background-color: #FFFFFF;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
+        .checkout {
+            padding: 20px;
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #FFFFFF;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
 
-.checkout h2 {
-    font-size: 24px;
-    color: #FF69B4;
-    text-align: center;
-}
+        .checkout h2 {
+            font-size: 24px;
+            color: #FF69B4;
+            text-align: center;
+        }
 
-.checkout form label {
-    display: block;
-    margin: 10px 0 5px;
-    color: #333333;
-    font-weight: bold;
-}
+        .checkout form label {
+            display: block;
+            margin: 10px 0 5px;
+            color: #333333;
+            font-weight: bold;
+        }
 
-.checkout form input[type="text"],
-.checkout form input[type="email"],
-.checkout form input[type="tel"] {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border-radius: 5px;
-    border: 1px solid #DDDDDD;
-}
+        .checkout form input[type="text"],
+        .checkout form input[type="email"],
+        .checkout form input[type="tel"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid #DDDDDD;
+        }
 
-.checkout form input[type="radio"] {
-    margin-right: 10px;
-}
+        .checkout form input[type="radio"] {
+            margin-right: 10px;
+        }
 
-.checkout button[type="submit"] {
-    background-color: #FFD700;
-    color: #FFFFFF;
-    padding: 12px 24px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    width: 100%;
-    margin-top: 20px;
-}
+        .checkout button[type="submit"] {
+            background-color: #FFD700;
+            color: #FFFFFF;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+            margin-top: 20px;
+        }
 
-.checkout button[type="submit"]:hover {
-    background-color: #FFC300;
-}
-}
-}
+        .checkout button[type="submit"]:hover {
+            background-color: #FFC300;
+        }
+
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Shop</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="hero">
+        <img class="logo" src="https://via.placeholder.com/150" alt="Logo">
+        <h1>Welcome to Our Shop</h1>
+        <p>Discover amazing products tailored just for you.</p>
+        <a class="button" href="#">Shop Now</a>
+    </div>
+
+    <div class="featured-boxes">
+        <h2>Featured Products</h2>
+        <div class="product-card">
+            <img src="https://via.placeholder.com/200" alt="Product">
+            <h3>Product Name</h3>
+            <p class="price">$99.99</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product-card">
+            <img src="https://via.placeholder.com/200" alt="Product">
+            <h3>Product Name</h3>
+            <p class="price">$49.99</p>
+            <button>Add to Cart</button>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-section">
+            <p>&copy; 2024 Shop Name. All Rights Reserved.</p>
+            <a href="#">Privacy Policy</a>
+        </div>
+    </footer>
+
+</body>
+</html>
