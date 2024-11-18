@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TD Matcha - Accessories</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="accessories.html">Accessories</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="cart.html">Cart (<span id="cart-count">0</span>)</a></li>
+        </ul>
+    </nav>
+
+    <section class="accessory-list">
+        <h2>Matcha Accessories</h2>
+
+        <div class="product-card">
+            <img src="cis2011-main/images/wisk.png" alt="whisk  style="width: 200px; height: auto;>
+                        <h3>Matcha Whisk</h3>
+            <p class="price">80 SAR</p>
+            <button onclick="location.href='product-details.html?product=matcha_whisk'">View Details</button>
+            <button onclick="addToCart('Matcha Whisk', 80)">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+            <img src="cis2011-main/images/bowl.png" alt="Matcha Bowl">
+            <h3>Matcha Bowl</h3>
+            <p class="price">120 SAR</p>
+            <button onclick="location.href='product-details.html?product=matcha_bowl'">View Details</button>
+            <button onclick="addToCart('Matcha Bowl', 120)">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+            <img src="cis2011-main/images/ice.png" alt="Ice Mold">
+            <h3>Ice Mold</h3>
+            <p class="price">30 SAR</p>
+            <button onclick="location.href='product-details.html?product=ice_mold'">View Details</button>
+            <button onclick="addToCart('Ice Mold', 30)">Add to Cart</button>
+        </div>
+
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            updateCartCount();
+        });
+
+        function addToCart(productName, price) {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            cart.push({ name: productName, price: price });
+            localStorage.setItem('cart', JSON.stringify(cart));
+            updateCartCount();
+            alert(productName + " has been added to your cart!");
+        }
+
+        function updateCartCount() {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            document.getElementById('cart-count').innerText = cart.length;
+        }
+    </script>
+    <footer>
+        <p>© 2024 All rights reserved - TD Matcha</p>
+    </footer>
+    
+    </body>
+    </html>
+
+</body>
+</html>
+
