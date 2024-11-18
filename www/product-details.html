@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TD Matcha - Product Details</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="accessories.html">Accessories</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="cart.html">Cart (<span id="cart-count">0</span>)</a></li>
+        </ul>
+    </nav>
+
+    <section class="product-details">
+        <div id="product-content">
+        </div>
+        <button id="add-to-cart-btn">Add to Cart</button>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            updateCartCount();
+            displayProductDetails();
+        });
+
+        function updateCartCount() {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            document.getElementById('cart-count').innerText = cart.length;
+        }
+
+        function displayProductDetails() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const product = urlParams.get('product');
+
+            const productDetails = {
+                small_matcha: {
+                    name: "Small Matcha",
+                    price: 120,
+                    description: "A 30g pack ideal for newcomers to matcha. Smooth and mild flavor.",
+                      image: "cis2011-main/images/small_matcha.jpg"
+                },
+                medium_matcha: {
+                    name: "Medium Matcha",
+                    price: 180,
+                    description: "60g pack for regular matcha drinkers. Balanced and rich.",
+                     image: "cis2011-main/images/medium_matcha.jpg"
+                },
+                large_matcha: {
+                    name: "Large Matcha",
+                    price: 240,
+                    description: "100g pack for matcha lovers, with an intense flavor.",
+                     image: "cis2011-main/images/large_matcha.jpg"
+                },
+                matcha_whisk: {
+                    name: "Matcha Whisk",
+                    price: 80,
+                    description: "Traditional bamboo whisk for preparing smooth matcha.",
+                    image: "cis2011-main/images/matcha_whisk.jpg"
+                },
+                matcha_bowl: {
+                    name: "Matcha Bowl",
+                    price: 120,
+                    description: "High-quality ceramic bowl for authentic matcha preparation.",
+                    image: "cis2011-main/images/matcha_bowl.jpg"
+                },
+                ice_mold: {
+                    name: "Ice Mold",
+                    price: 30,
+                    description: "Silicone mold for perfect matcha ice cubes.",
+                    image: "cis2011-main/images/ice_mold.jpg"                }
+            };
+
+            const productData = productDetails[product];
+            if (productData) {
+                document.getElementById('product-content').innerHTML = `
+                    <img src="${productData.image}" alt="${productData.name}">
+                    <h2>${productData.name}</h2>
+                    <p class="price">${productData.price} SAR</p>
+                    <p>${productData.description}</p>
+                `;
+                document.getElementById('add-to-cart-btn').onclick = () => addToCart(productData.name, productData.price);
+            } else {
+                document.getElementById('product-content').innerHTML = "<p>Product not found.</p>";
+            }
+        }
+
+        function addToCart(productName, price) {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            cart.push({ name: productName, price: price });
+            localStorage.setItem('cart', JSON.stringify(cart));
+            updateCartCount();
+            alert(productName + " has been added to your cart!");
+        }
+    </script>
+    <footer>
+        <p>© 2024 All rights reserved - TD Matcha</p>
+    </footer>
+    
+    </body>
+    </html>
+
+</body>
+</html>
